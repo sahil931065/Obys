@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+    color: #fff;
+  
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*---------------------------------------Coursor */
+
+#crcours{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 1px solid #ede1e1;
+    position: fixed;
+    z-index: 99;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+/*---------------------------------------Loader */
+
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #030303;
+    padding: 25vh 10vw ;
+}
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw ;
+}
+#line1-num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#line1-num h6 , #line1-num h5 {
+    font-family: 'silk serif ';
+    font-weight: 100;
+    font-size: 3vw;   
+}
+#line1-num h5{
+    width: 5vw;
+    text-align: right;
+}
+.line h1{
+
+    font-size: 6.5vw  ;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.line h2{
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animat {
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke:1px #FFF;
+        color:#fff;
+        opacity: 1;
+    }
+    47%{
+        font-family: "plain light";
+        -webkit-text-stroke:1px #FFF;
+        color:#fff;
+        opacity: 0;
+    }
+    50%{
+        font-family: "slik serif";
+        -webkit-text-stroke:1px #FFF;
+        color: transparent;
+        opacity: 1;
+    }
+    100%{
+        font-family: "slik serif";
+        -webkit-text-stroke:1px #FFF;
+        color: transparent;
+        opacity: 0;
+    }
+}
+
+#main{ 
+    position: relative; /*In loco avid giving parent dimensions*/
+
+}
+
+
+/*---------------------------------------Pg1 */
+
+#page1{
+    width: 100%;
+    height: 100vh;
+} 
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vw 4vw;
+}
+
+#nav-2 {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+#nav-2 h4{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero{
+    width: 80%;
+    margin-left: 20%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+}
+.hero h1{
+    font-weight:900;
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+}
+
+.hero h2 , .hero h3{
+    font-weight:900;
+    font-size: 7vw;
+    text-transform: uppercase;
+    border-bottom: 0.5vw solid #fff;
+    padding-bottom: 0.8vw;
+    overflow: hidden;
+    transition: all ease 0.3s ;
+}
+.hero h3{
+    border: none;
+}
+#hero3 h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 500; 
+    color: transparent;
+    border-bottom: 0.5vw solid transparent;
+}
+
+
+/*---------------------------------------Pg2 */
+#page2{
+    width: 100%;
+    height: 100vh;
+    padding-top: 7vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#vidContainer{
+    height: 65vh;
+    width: 71vw;
+    position: relative;
+    left: 29%;
+    background-image: url(./Asset/thumnail.png);
+
+}
+#vidContainer img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top:0; 
+}
+#vidContainer video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#videoCursor{
+    background-color: #FFA63D;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute ;
+    top:-10%;
+    left:80%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#videoCursor i {
+    font-size: 2vw;
+}
+
+/*---------------------------------------Pg3 */
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/*---------------------------------------Pg4 */
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 7vh 0;
+}
+
+#page4-content{
+    width: 65vw;
+    margin-left: 28%;
+    position: relative;
+}
+
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+    margin : 5vh 0;
+}
+#page4-content>p {
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+#page4Flex{
+    display: flex;
+}
+#page4Flex img{
+    width: 48%;
+    max-height: 85vh;
+}
+#page4Flex p{
+    font-size: 1vw;
+    width: 18%;
+    letter-spacing: 0.1vw;
+    line-height: 1.2vw;
+    margin-left: 1vw ;
+}  
+
+#page4-blue-div{
+    background:#3F7DF4;
+    width: 32vw;
+    padding : 4vw 2vw;
+    position: relative;
+    margin-top: -43vh;
+    margin-left: 26vw;
+}  
+
+.blue-div-elem{
+    display : flex;
+    align-items : flex-start;
+    justify-content: space-between;
+
+    padding : 1.7vw 0;
+    border-bottom: 3px solid #ffffff69;
+}
+.blue-div-elem h4{
+    font-size:1.3vw;
+    font-weight: 500;
+}
+.blue-div-elem p{
+    width: 50%;
+    font-size: 0.7vw;
+}
+
+
+/*---------------------------------------Pg5 */
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding : 5vw 0;
+}
