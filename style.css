@@ -58,9 +58,12 @@ body{
     font-family: 'silk serif ';
     font-weight: 100;
     font-size: 3vw;   
+    font-style: italic;
 }
 #line1-num h5{
     width: 5vw;
+    font-style: italic;
+    font-family:"silk serif";
     text-align: right;
 }
 .line h1{
@@ -313,4 +316,112 @@ body{
     min-height: 100vh;
     width: 100%;
     padding : 5vw 0;
+    position: relative;
+}
+
+.elem , .elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1vw;
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: animateElem;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animateElem {
+    from {
+        transform : translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    transform: translateX(calc(-100%-20px));
+    animation-name: animateElem;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+.elem span ,.elem2 span{
+    font-style: italic;
+    font-family:"silk serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    margin-left: 16px;
+}
+
+/*---------------------------------------Footer  */
+
+#footer{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    padding-left: 38vh;
+    padding-right: 2vw;
+
+}
+
+#footer h1{
+    font-size:8vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#footer h1::before{
+    content: "04";
+    font-size: 4vw;
+    position: absolute;
+    left: -10%;
+    top:4%;
+    font-style: italic;
+    font-family:"silk serif";
+    color: #fff;
+    
+}
+#footer .underline{
+    height: 2px  ;
+    width: 100%;
+    margin: 2vw 0;
+}
+
+#footer-div{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+}
+#footer-div h6{
+    font-size: 1vw;
+}
+
+#footer-div h5{
+    font-size : 1.2vw;
+    margin: 0.1vh 0;
+}
+
+#footer>h5{
+    font-weight: 500;
+    font-size: 1.vw;
 }
