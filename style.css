@@ -19,6 +19,7 @@ body{
 /*---------------------------------------Coursor */
 
 #crcours{
+    display: flex;
     height: 2vw;
     width: 2vw;
     border-radius: 50%;
@@ -75,6 +76,7 @@ body{
 .line h2{
     font-size: 6vw;
     text-transform: uppercase;
+
     font-weight: 900;
     opacity: 0;
     animation-duration: 1s;
@@ -98,11 +100,13 @@ body{
     50%{
         font-family: "slik serif";
         -webkit-text-stroke:1px #FFF;
+            font-style: italic;
         color: transparent;
         opacity: 1;
     }
     100%{
         font-family: "slik serif";
+        font-style: italic;
         -webkit-text-stroke:1px #FFF;
         color: transparent;
         opacity: 0;
@@ -124,7 +128,7 @@ body{
 
 #page1 #nav{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
     padding: 2.5vw 4vw;
 }
@@ -146,10 +150,21 @@ body{
     margin-left: 20%;
     height: fit-content;
     display: flex;
-    overflow: hidden;
     align-items: center;
     position: relative;
     z-index: 99999;
+
+}
+#hero1::before{
+    content: "01";
+    font-size: 4vw;
+    position: absolute;
+    left: -10%;
+    top:4%;
+    font-style: italic;
+    font-family:"silk serif";
+    color: #fff;
+    
 }
 .hero h1{
     font-weight:900;
@@ -207,6 +222,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
 }
 
 #videoCursor{
@@ -214,7 +230,7 @@ body{
     height: 8vw;
     width: 8vw;
     border-radius: 50%;
-    position: absolute ;
+    position: absolute;
     top:-10%;
     left:80%;
     z-index: 999;
@@ -231,9 +247,118 @@ body{
     min-height: 100vh;
     width: 100%;
     position: relative;
+    padding: 17vh 2vw;
+    margin-bottom:20vh;
+
 }
 
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: '02';
+    font-size: 4vw;
+    position: absolute;
+    left: 20%;
+    top:17%;
+    font-style: italic;
+    font-family:"silk serif";
+    color: #fff;
+}
+#page3 .underline{
+    margin-left: 28vw;
+}
+#image-div-container {
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    gap: 3vw;
 
+}
+.image-div{
+    height: 33vw;
+    position: relative;
+    overflow: hidden;
+    width: 25vw;
+}
+.image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-div2{
+    height: 45vw;
+    position: relative;
+    overflow: hidden;
+    width: 27vw;
+}
+.image-div2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle-div{
+    width: 40vw;
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circles ,.circles2{
+    width: 30vw;
+    height: 60%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.circles>img , .circles2>img{
+    height: 40%;
+    width: 40%;
+    z-index: 2;
+    rotate: 90deg;
+}
+.circles2>img{
+    rotate: 65deg;
+}
+.text-circle ,.text-circle2{
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    width: 60%;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);;
+    z-index: 2;
+}
+.bg ,.bg2{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    scale: 0;
+    border-radius: 50%;
+}
+
+#image-div-container-2{
+    margin: 5vw 0;
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    gap: 3vw;
+
+}
 
 
 /*---------------------------------------Pg4 */
@@ -253,6 +378,16 @@ body{
 #page4-content h1{
     font-size: 7vw;
     text-transform: uppercase;
+}
+#page4-content h1::before{
+    content: '03';
+    font-size: 4vw;
+    position: absolute;
+    left: -14%;
+    top:1%;
+    font-style: italic;
+    font-family:"silk serif";
+    color: #fff;
 }
 
 .underline{
@@ -317,6 +452,7 @@ body{
     width: 100%;
     padding : 5vw 0;
     position: relative;
+    margin-top: 5vw;
 }
 
 .elem , .elem2{
@@ -381,14 +517,17 @@ body{
     padding-right: 2vw;
 
 }
-
+#footerCreate{
+    display: flex;
+    gap: 3vw;
+}
 #footer h1{
     font-size:8vw;
     text-transform: uppercase;
     position: relative;
 }
 
-#footer h1::before{
+#footer>h1::before{
     content: "04";
     font-size: 4vw;
     position: absolute;
@@ -423,5 +562,16 @@ body{
 
 #footer>h5{
     font-weight: 500;
-    font-size: 1.vw;
+    font-size: 1.1vw;
+}
+
+
+#footer h1 span{
+    display: inline-block;
+}
+
+
+._canvas_container{
+    z-index: 9999999 !important;
+    pointer-events: none;
 }
